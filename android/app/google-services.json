@@ -1,0 +1,111 @@
+{
+  "project_info": {
+    "project_number": "708529425960",
+    "firebase_url": "https://e-book-b4248.firebaseio.com",
+    "project_id": "e-book-b4248",
+    "storage_bucket": "e-book-b4248.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:708529425960:android:f40de6ebfed879ef27ef1d",
+        "android_client_info": {
+          "package_name": "com.iqonic.bookkart"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "708529425960-5be7uqavnalaarnqr5ro28p9tacd687d.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.iqonic.bookkart",
+            "certificate_hash": "b4cceae68e17aef32b4712bc5205c478c817e42b"
+          }
+        },
+        {
+          "client_id": "708529425960-amqa2chp4m4tkp6ra1g41jemeh9aqqra.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.iqonic.bookkart",
+            "certificate_hash": "fbfd89540bb2c92c0491173694c7e2d943eff53a"
+          }
+        },
+        {
+          "client_id": "708529425960-cr376g0o12ptmqu78ml6n5h8nm2hmvhr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.iqonic.bookkart",
+            "certificate_hash": "cfb4271fb7cbd8ddbcb9aa5decb24c85a7bfa4b5"
+          }
+        },
+        {
+          "client_id": "708529425960-d0fvms0r959bi80pqo264rvbn9mibon4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.iqonic.bookkart",
+            "certificate_hash": "d7a05def28e5f1b16d3e40f7706d03339611c107"
+          }
+        },
+        {
+          "client_id": "708529425960-enmelthr2r7vibutkmkbjvvle9stg8v8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.iqonic.bookkart",
+            "certificate_hash": "85b3f0fbda1421a3a781954d5caecf90d97558bb"
+          }
+        },
+        {
+          "client_id": "708529425960-etvpcc2vvhq5ndpfb489hfun9oilfs1n.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.iqonic.bookkart",
+            "certificate_hash": "f3e1e3ad181563a890e9aa328f52e3deae0d59ef"
+          }
+        },
+        {
+          "client_id": "708529425960-fn544uvhpbggemtdkgqjjgpg5td06dqp.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.iqonic.bookkart",
+            "certificate_hash": "9075992c1241966c063fdc78c1ccb149ef125950"
+          }
+        },
+        {
+          "client_id": "708529425960-jq455c5lkuqao0vf5nf0if24c9f7ni82.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.iqonic.bookkart",
+            "certificate_hash": "c7a0c4f234bd2dec9d6d97af9a3fa47ef7934326"
+          }
+        },
+        {
+          "client_id": "708529425960-72kh4deqghjqjer1dq7onfuijlh8f8p1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAbozK6LIEjrtzBW9OZ0_R4QrOA3lcPhtE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "708529425960-72kh4deqghjqjer1dq7onfuijlh8f8p1.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "708529425960-hvnr1jpfture5h1dcsajguvc213bo9hu.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.iqonic.booksto"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
