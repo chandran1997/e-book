@@ -1,4 +1,9 @@
-  <div>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+  </head>
+  <body>
     <style data-move="true">
       @supports (((-webkit-hyphens: none)) and (not (margin-trim: inline))) or
         ((-moz-orient: inline) and (not (color: rgb(from red r g b)))) {
@@ -49,7 +54,7 @@
         }
       }
       @layer theme {
-        :root-a,
+        :root,
         :host {
           --font-sans: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
             "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
@@ -714,7 +719,7 @@
           }
         }
       }
-      :root-a {
+      :root {
         font-synthesis: none;
         text-rendering: optimizeLegibility;
         -webkit-font-smoothing: antialiased;
@@ -893,7 +898,7 @@
         syntax: "*";
         inherits: false;
       }
-      #root-a {
+      #root {
         text-align: center;
         max-width: 1280px;
         margin: 0 auto;
@@ -931,7 +936,7 @@
         color: #888;
       }
     </style>
-    <div id="root-a"></div>
+    <div id="root"></div>
   
     <script>
       function e(e, t, n, r) {
@@ -15377,7 +15382,7 @@
           }),
         });
       };
-      (0, u.createRoot)(document.getElementById("root-a")).render(
+      (0, u.createRoot)(document.getElementById("root")).render(
         (0, o.jsx)(i.StrictMode, {
           children: (0, o.jsx)(function () {
             return (0, o.jsx)(o.Fragment, { children: (0, o.jsx)(e_, {}) });
@@ -15385,4 +15390,5 @@
         })
       );
     </script>
-  </div>
+  </body>
+</html>
