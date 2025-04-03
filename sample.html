@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- <link rel="stylesheet" href="tools.2786f00d.css" /> -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <style>
+      /*! tailwindcss v4.1.0 | MIT License | https://tailwindcss.com */
       @supports (((-webkit-hyphens: none)) and (not (margin-trim: inline))) or
         ((-moz-orient: inline) and (not (color: rgb(from red r g b)))) {
         @layer base {
@@ -36,6 +35,7 @@
             --tw-ring-offset-width: 0px;
             --tw-ring-offset-color: #fff;
             --tw-ring-offset-shadow: 0 0 #0000;
+            --tw-outline-style: solid;
             --tw-blur: initial;
             --tw-brightness: initial;
             --tw-contrast: initial;
@@ -65,7 +65,12 @@
           --color-green-500: oklch(72.3% 0.219 149.579);
           --color-green-900: oklch(39.3% 0.095 152.535);
           --color-blue-600: oklch(54.6% 0.245 262.881);
+          --color-blue-900: oklch(37.9% 0.146 265.522);
+          --color-blue-950: oklch(28.2% 0.091 267.935);
+          --color-slate-200: oklch(92.9% 0.013 255.508);
           --color-gray-100: oklch(96.7% 0.003 264.542);
+          --color-gray-300: oklch(87.2% 0.01 258.338);
+          --color-gray-400: oklch(70.7% 0.022 261.325);
           --color-gray-700: oklch(37.3% 0.034 259.733);
           --color-white: #fff;
           --spacing: 0.25rem;
@@ -391,6 +396,9 @@
         .mt-10 {
           margin-top: calc(var(--spacing) * 10);
         }
+        .mb-2 {
+          margin-bottom: calc(var(--spacing) * 2);
+        }
         .mb-4 {
           margin-bottom: calc(var(--spacing) * 4);
         }
@@ -439,18 +447,24 @@
         .w-\[100px\] {
           width: 100px;
         }
+        .w-\[120px\] {
+          width: 120px;
+        }
         .w-full {
           width: 100%;
         }
         .max-w-screen-2xl {
           max-width: var(--breakpoint-2xl);
         }
-        .min-w-\[200px\] {
-          min-width: 200px;
+        .min-w-\[220px\] {
+          min-width: 220px;
         }
         .transform {
           transform: var(--tw-rotate-x) var(--tw-rotate-y) var(--tw-rotate-z)
             var(--tw-skew-x) var(--tw-skew-y);
+        }
+        .cursor-pointer {
+          cursor: pointer;
         }
         .resize {
           resize: both;
@@ -461,8 +475,14 @@
         .items-center {
           align-items: center;
         }
+        .items-end {
+          align-items: flex-end;
+        }
         .justify-center {
           justify-content: center;
+        }
+        .justify-end {
+          justify-content: flex-end;
         }
         .gap-4 {
           gap: calc(var(--spacing) * 4);
@@ -551,8 +571,14 @@
           border-left-style: var(--tw-border-style);
           border-left-width: 2px;
         }
+        .border-gray-300 {
+          border-color: var(--color-gray-300);
+        }
         .border-gray-700 {
           border-color: var(--color-gray-700);
+        }
+        .bg-blue-950 {
+          background-color: var(--color-blue-950);
         }
         .bg-gray-100 {
           background-color: var(--color-gray-100);
@@ -578,14 +604,20 @@
         .px-3 {
           padding-inline: calc(var(--spacing) * 3);
         }
-        .px-10 {
-          padding-inline: calc(var(--spacing) * 10);
+        .px-3\.5 {
+          padding-inline: calc(var(--spacing) * 3.5);
         }
         .py-2 {
           padding-block: calc(var(--spacing) * 2);
         }
+        .py-\[6px\] {
+          padding-block: 6px;
+        }
         .text-center {
           text-align: center;
+        }
+        .text-start {
+          text-align: start;
         }
         .font-sans {
           font-family: var(--font-sans);
@@ -632,6 +664,9 @@
         .text-blue-600 {
           color: var(--color-blue-600);
         }
+        .text-gray-400 {
+          color: var(--color-gray-400);
+        }
         .text-gray-700 {
           color: var(--color-gray-700);
         }
@@ -657,6 +692,17 @@
           box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow),
             var(--tw-ring-offset-shadow), var(--tw-ring-shadow),
             var(--tw-shadow);
+        }
+        .shadow-sm {
+          --tw-shadow: 0 1px 3px 0 var(--tw-shadow-color, #0000001a),
+            0 1px 2px -1px var(--tw-shadow-color, #0000001a);
+          box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow),
+            var(--tw-ring-offset-shadow), var(--tw-ring-shadow),
+            var(--tw-shadow);
+        }
+        .outline {
+          outline-style: var(--tw-outline-style);
+          outline-width: 1px;
         }
         .filter {
           filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast)
@@ -697,17 +743,43 @@
           --tw-ease: var(--ease-in-out);
           transition-timing-function: var(--ease-in-out);
         }
+        @media (hover: hover) {
+          .hover\:bg-blue-900:hover {
+            background-color: var(--color-blue-900);
+          }
+        }
+        .focus\:ring-2:focus {
+          --tw-ring-shadow: var(--tw-ring-inset) 0 0 0
+            calc(2px + var(--tw-ring-offset-width))
+            var(--tw-ring-color, currentColor);
+          box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow),
+            var(--tw-ring-offset-shadow), var(--tw-ring-shadow),
+            var(--tw-shadow);
+        }
+        .focus\:ring-slate-200:focus {
+          --tw-ring-color: var(--color-slate-200);
+        }
+        .focus\:outline-none:focus {
+          --tw-outline-style: none;
+          outline-style: none;
+        }
         @media (width>=40rem) {
           .sm\:w-2\/4 {
             width: 50%;
           }
+          .sm\:min-w-\[280px\] {
+            min-width: 280px;
+          }
           .sm\:flex-row {
             flex-direction: row;
           }
+          .sm\:px-2 {
+            padding-inline: calc(var(--spacing) * 2);
+          }
         }
         @media (width>=48rem) {
-          .md\:min-w-\[300px\] {
-            min-width: 300px;
+          .md\:w-\[180px\] {
+            width: 180px;
           }
         }
         @media (width>=64rem) {
@@ -838,6 +910,11 @@
         inherits: false;
         initial-value: 0 0 #0000;
       }
+      @property --tw-outline-style {
+        syntax: "*";
+        inherits: false;
+        initial-value: solid;
+      }
       @property --tw-blur {
         syntax: "*";
         inherits: false;
@@ -899,50 +976,11 @@
         syntax: "*";
         inherits: false;
       }
-      #root {
-        text-align: center;
-        max-width: 1280px;
-        margin: 0 auto;
-        padding: 2rem;
-      }
-      .logo {
-        will-change: filter;
-        height: 6em;
-        padding: 1.5em;
-        transition: filter 0.3s;
-      }
-      .logo:hover {
-        filter: drop-shadow(0 0 2em #646cffaa);
-      }
-      .logo.react:hover {
-        filter: drop-shadow(0 0 2em #61dafbaa);
-      }
-      @keyframes logo-spin {
-        0% {
-          transform: rotate(0);
-        }
-        to {
-          transform: rotate(360deg);
-        }
-      }
-      @media (prefers-reduced-motion: no-preference) {
-        a:nth-of-type(2) .logo {
-          animation: 20s linear infinite logo-spin;
-        }
-      }
-      .card {
-        padding: 2em;
-      }
-      .read-the-docs {
-        color: #888;
-      }
     </style>
-
   </head>
   <body>
     <div id="root"></div>
-  
-    <script>
+    <script type="module">
       function e(e, t, n, r) {
         Object.defineProperty(e, t, {
           get: n,
@@ -13839,22 +13877,31 @@
         selectedValue: t,
         onChange: n,
         placeholder: r = "Select an option",
-        className: l,
+        className: l = "",
       }) {
-        return (0, o.jsxs)("select", {
-          value: t,
-          onChange: (e) => n(e.target.value),
-          className: "w-[100px] " + l,
-          children: [
-            (0, o.jsx)("option", { value: "", disabled: !0, children: r }),
-            e.map((e) =>
-              (0, o.jsx)(
-                "option",
-                { value: e.value, children: e.label },
-                e.value
-              )
-            ),
-          ],
+        return (0, o.jsx)("div", {
+          className: `relative w-[120px] md:w-[180px] ${l}`,
+          children: (0, o.jsxs)("select", {
+            value: t,
+            onChange: (e) => n(e.target.value),
+            className:
+              "w-full px-3 py-[6px] border border-gray-300 rounded-lg shadow-sm bg-white focus:ring-2 focus:ring-slate-200 focus:outline-none transition-all cursor-pointer",
+            children: [
+              (0, o.jsx)("option", {
+                value: "",
+                disabled: !0,
+                className: "text-gray-400",
+                children: r,
+              }),
+              e.map((e) =>
+                (0, o.jsx)(
+                  "option",
+                  { value: e.value, className: "p-2", children: e.label },
+                  e.value
+                )
+              ),
+            ],
+          }),
         });
       }
       l("fYo6y");
@@ -15082,278 +15129,239 @@
         (c.twJoin = z),
         (c.twMerge = eP),
         (c.validators = ek);
-      var eN = ({ className: e, children: t }) =>
+      var eN = () => {
+        let [e, t] = (0, i.useState)(),
+          [n, r] = (0, i.useState)(),
+          [l, a] = (0, i.useState)(null),
+          [u, c] = (0, i.useState)(null),
+          [f, d] = (0, i.useState)(null),
+          p = [
+            { value: "mAh", label: "mAh" },
+            { value: "Ah", label: "Ah" },
+          ],
+          [m, h] = (0, i.useState)(p[0].value),
+          g = [
+            { value: "mA", label: "mA" },
+            { value: "A", label: "A" },
+          ],
+          [b, y] = (0, i.useState)(g[0].value),
+          v = [
+            { value: "Hours", label: "Hours" },
+            { value: "Days", label: "Days" },
+            { value: "Weeks", label: "Weeks" },
+            { value: "Months", label: "Months" },
+            { value: "Years", label: "Years" },
+          ],
+          [k, w] = (0, i.useState)(v[0].value),
+          x = (e, t) => {
+            if ((console.log("formatTime", e, t), "Hours" === t)) {
+              let t = Math.floor(e),
+                n = Math.round((e - t) * 60);
+              return `${t} Hrs ${n} Min`;
+            }
+            if ("Days" === t) {
+              let t = Math.floor(e / 24),
+                n = e % 24,
+                r = Math.floor(n),
+                l = Math.round((n - r) * 60);
+              return `${t} Days ${r} Hrs ${l} Min`;
+            }
+            if ("Weeks" === t) {
+              let t = Math.floor(e / 168),
+                n = e % 168,
+                r = Math.floor(n / 24),
+                l = Math.floor(n % 24),
+                a = Math.round((n - l) * 60);
+              return `${t} Wks ${r} Days ${l} Hrs ${a} Min`;
+            }
+            if ("Months" === t) {
+              let t = Math.floor(e / 720),
+                n = e % 720,
+                r = Math.floor(n / 24),
+                l = Math.floor(n % 24),
+                a = Math.round((n - l) * 60);
+              return `${t} Mos ${r} Days ${l} Hrs ${a} Min`;
+            }
+            if ("Years" === t) {
+              let t = Math.floor(e / 8760),
+                n = e % 8760,
+                r = Math.floor(n / 720),
+                l = Math.floor((n % 720) / 24),
+                a = Math.floor(n % 24),
+                o = Math.round((n - a) * 60);
+              return `${t} Yrs ${r} Mos ${l} Days ${a} Hrs ${o} Min`;
+            }
+            return "0 Min";
+          },
+          S = (e, t) => {
+            if (e <= 0) return "0 Min";
+            if ("Hours" === t) return `${e.toFixed(3)} Hour`;
+            if ("Days" === t) {
+              let t = e / 24;
+              return `${t.toFixed(3)} Day`;
+            }
+            if ("Weeks" === t) {
+              let t = e / 168;
+              return `${t.toFixed(3)} Week`;
+            }
+            if ("Months" === t) {
+              let t = e / 720;
+              return `${t.toFixed(3)} Month`;
+            }
+            if ("Years" === t) {
+              let t = e / 8760;
+              return `${t.toFixed(3)} Year`;
+            }
+            return "0 Min";
+          },
+          E = () => {
+            if (!e || !n) return;
+            console.log(k);
+            let t = e,
+              r = n;
+            "mAh" === m && (t = e / 1e3), "mA" === b && (r = n / 1e3);
+            let l = t / r;
+            a(x(l, k)), d(S(l, k)), c(x(l, "Hours"));
+          };
+        return (
+          (0, i.useEffect)(() => {
+            E();
+          }, [e, n, k]),
           (0, o.jsx)("div", {
-            className: `${(function (...e) {
-              return (0, c.twMerge)(
-                (function () {
-                  for (
-                    var e, t, n = 0, r = "", l = arguments.length;
-                    n < l;
-                    n++
-                  )
-                    (e = arguments[n]) &&
-                      (t = (function e(t) {
-                        var n,
-                          r,
-                          l = "";
-                        if ("string" == typeof t || "number" == typeof t)
-                          l += t;
-                        else if ("object" == typeof t)
-                          if (Array.isArray(t)) {
-                            var a = t.length;
-                            for (n = 0; n < a; n++)
-                              t[n] &&
-                                (r = e(t[n])) &&
-                                (l && (l += " "), (l += r));
-                          } else
-                            for (r in t) t[r] && (l && (l += " "), (l += r));
-                        return l;
-                      })(e)) &&
-                      (r && (r += " "), (r += t));
-                  return r;
-                })(e)
-              );
-            })("mx-auto w-full max-w-screen-2xl", e)}`,
-            children: t,
-          }),
-        e_ = () => {
-          let [e, t] = (0, i.useState)(),
-            [n, r] = (0, i.useState)(),
-            [l, a] = (0, i.useState)(null),
-            [u, c] = (0, i.useState)(null),
-            [f, d] = (0, i.useState)(null),
-            p = [
-              { value: "mAh", label: "mAh" },
-              { value: "Ah", label: "Ah" },
-            ],
-            [m, h] = (0, i.useState)(p[0].value),
-            g = [
-              { value: "mA", label: "mA" },
-              { value: "A", label: "A" },
-            ],
-            [b, y] = (0, i.useState)(g[0].value),
-            v = [
-              { value: "Hours", label: "Hours" },
-              { value: "Days", label: "Days" },
-              { value: "Weeks", label: "Weeks" },
-              { value: "Months", label: "Months" },
-              { value: "Years", label: "Years" },
-            ],
-            [k, w] = (0, i.useState)(v[0].value),
-            x = (e, t) => {
-              if ((console.log("formatTime", e, t), "Hours" === t)) {
-                let t = Math.floor(e),
-                  n = Math.round((e - t) * 60);
-                return `${t} Hrs ${n} Min`;
-              }
-              if ("Days" === t) {
-                let t = Math.floor(e / 24),
-                  n = e % 24,
-                  r = Math.floor(n),
-                  l = Math.round((n - r) * 60);
-                return `${t} Days ${r} Hrs ${l} Min`;
-              }
-              if ("Weeks" === t) {
-                let t = Math.floor(e / 168),
-                  n = e % 168,
-                  r = Math.floor(n / 24),
-                  l = Math.floor(n % 24),
-                  a = Math.round((n - l) * 60);
-                return `${t} Wks ${r} Days ${l} Hrs ${a} Min`;
-              }
-              if ("Months" === t) {
-                let t = Math.floor(e / 720),
-                  n = e % 720,
-                  r = Math.floor(n / 24),
-                  l = Math.floor(n % 24),
-                  a = Math.round((n - l) * 60);
-                return `${t} Mos ${r} Days ${l} Hrs ${a} Min`;
-              }
-              if ("Years" === t) {
-                let t = Math.floor(e / 8760),
-                  n = e % 8760,
-                  r = Math.floor(n / 720),
-                  l = Math.floor((n % 720) / 24),
-                  a = Math.floor(n % 24),
-                  o = Math.round((n - a) * 60);
-                return `${t} Yrs ${r} Mos ${l} Days ${a} Hrs ${o} Min`;
-              }
-              return "0 Min";
-            },
-            S = (e, t) => {
-              if (e <= 0) return "0 Min";
-              if ("Hours" === t) return `${e.toFixed(3)} Hour`;
-              if ("Days" === t) {
-                let t = e / 24;
-                return `${t.toFixed(3)} Day`;
-              }
-              if ("Weeks" === t) {
-                let t = e / 168;
-                return `${t.toFixed(3)} Week`;
-              }
-              if ("Months" === t) {
-                let t = e / 720;
-                return `${t.toFixed(3)} Month`;
-              }
-              if ("Years" === t) {
-                let t = e / 8760;
-                return `${t.toFixed(3)} Year`;
-              }
-              return "0 Min";
-            },
-            E = () => {
-              if (!e || !n) return;
-              console.log(k);
-              let t = e,
-                r = n;
-              "mAh" === m && (t = e / 1e3), "mA" === b && (r = n / 1e3);
-              let l = t / r;
-              a(x(l, k)), d(S(l, k)), c(x(l, "Hours"));
-            };
-          return (
-            (0, i.useEffect)(() => {
-              E();
-            }, [e, n, k]),
-            (0, o.jsx)(eN, {
-              className: "mt-10 font-sans lg:px-12 ",
+            className: "font-sans px-3.5 lg:px-12 ",
+            children: (0, o.jsx)(o.Fragment, {
               children: (0, o.jsxs)("div", {
-                className: "w-full rounded-lg bg-white p-6 shadow-md",
+                className:
+                  "flex w-full flex-col items-center justify-center space-y-4 sm:flex-row",
                 children: [
-                  (0, o.jsx)("h2", {
-                    className: "mb-4 text-center text-2xl font-semibold",
-                    children: "Battery Life Calculator",
+                  (0, o.jsxs)("div", {
+                    className:
+                      "flex w-full flex-col space-y-4 text-sm sm:w-2/4",
+                    children: [
+                      (0, o.jsxs)("div", {
+                        children: [
+                          (0, o.jsx)("label", {
+                            className:
+                              "block font-medium text-gray-700 text-start",
+                            children: "Battery Capacity",
+                          }),
+                          (0, o.jsxs)("div", {
+                            className:
+                              "flex h-10 items-end justify-end space-x-2",
+                            children: [
+                              (0, o.jsx)("input", {
+                                type: "number",
+                                className: "w-full rounded border p-2 text-xs",
+                                value: e,
+                                onChange: (e) => t(e.target.value || ""),
+                                placeholder: "Enter capacity",
+                              }),
+                              (0, o.jsx)(s, {
+                                options: p,
+                                selectedValue: m,
+                                onChange: (e) => h(e),
+                              }),
+                            ],
+                          }),
+                        ],
+                      }),
+                      (0, o.jsxs)("div", {
+                        children: [
+                          (0, o.jsx)("label", {
+                            className:
+                              "block font-medium text-gray-700 text-start",
+                            children: "Device Consumption",
+                          }),
+                          (0, o.jsxs)("div", {
+                            className:
+                              "flex h-10 items-end justify-end space-x-2",
+                            children: [
+                              (0, o.jsx)("input", {
+                                type: "number",
+                                className: "w-full rounded border p-2 text-xs",
+                                value: n,
+                                onChange: (e) =>
+                                  r(Number(e.target.value) || ""),
+                                placeholder: "Enter consumption...",
+                              }),
+                              (0, o.jsx)(s, {
+                                options: g,
+                                selectedValue: b,
+                                onChange: (e) => y(e),
+                              }),
+                            ],
+                          }),
+                        ],
+                      }),
+                      (0, o.jsxs)("div", {
+                        children: [
+                          (0, o.jsx)("label", {
+                            className:
+                              "block font-medium text-gray-700 text-start mb-2",
+                            children: "Display Time Format",
+                          }),
+                          (0, o.jsx)(s, {
+                            options: v,
+                            selectedValue: k,
+                            onChange: (e) => w(e),
+                          }),
+                        ],
+                      }),
+                      (0, o.jsx)("button", {
+                        onClick: E,
+                        className:
+                          "shadow-md bg-blue-950 text-white p-2 rounded-md hover:bg-blue-900 cursor-pointer",
+                        children: "Calculate Battery Life",
+                      }),
+                    ],
                   }),
                   (0, o.jsxs)("div", {
                     className:
-                      "flex w-full flex-col items-center justify-center space-y-4 sm:flex-row",
+                      "flex w-full flex-col items-center justify-center gap-4 sm:px-2 sm:w-2/4",
                     children: [
                       (0, o.jsxs)("div", {
                         className:
-                          "flex w-full flex-col space-y-4 text-sm sm:w-2/4",
+                          "rounded-md bg-gray-100 p-2 text-sm font-normal text-gray-700 lg:text-sm",
                         children: [
-                          (0, o.jsxs)("div", {
-                            children: [
-                              (0, o.jsx)("label", {
-                                className: "block font-medium text-gray-700",
-                                children: "Battery Capacity",
-                              }),
-                              (0, o.jsxs)("div", {
-                                className:
-                                  "flex h-10 items-center justify-center space-x-2",
-                                children: [
-                                  (0, o.jsx)("input", {
-                                    type: "number",
-                                    className:
-                                      "w-full rounded border p-2 text-xs",
-                                    value: e,
-                                    onChange: (e) => t(e.target.value || ""),
-                                    placeholder: "Enter capacity",
-                                  }),
-                                  (0, o.jsx)(s, {
-                                    options: p,
-                                    selectedValue: m,
-                                    onChange: (e) => h(e),
-                                  }),
-                                ],
-                              }),
-                            ],
+                          "Battery Life =",
+                          " ",
+                          (0, o.jsx)("span", {
+                            className: "text-blue-600",
+                            children: "Battery Capacity (mAh)",
                           }),
-                          (0, o.jsxs)("div", {
-                            children: [
-                              (0, o.jsx)("label", {
-                                className: "block font-medium text-gray-700",
-                                children: "Device Consumption",
-                              }),
-                              (0, o.jsxs)("div", {
-                                className:
-                                  "flex h-10 items-center justify-center space-x-2",
-                                children: [
-                                  (0, o.jsx)("input", {
-                                    type: "number",
-                                    className:
-                                      "w-full rounded border p-2 text-xs",
-                                    value: n,
-                                    onChange: (e) =>
-                                      r(Number(e.target.value) || ""),
-                                    placeholder: "Enter consumption...",
-                                  }),
-                                  (0, o.jsx)(s, {
-                                    options: g,
-                                    selectedValue: b,
-                                    onChange: (e) => y(e),
-                                  }),
-                                ],
-                              }),
-                            ],
-                          }),
-                          (0, o.jsxs)("div", {
-                            children: [
-                              (0, o.jsx)("label", {
-                                className: "block font-medium text-gray-700",
-                                children: "Display Time Format",
-                              }),
-                              (0, o.jsx)(s, {
-                                options: v,
-                                selectedValue: k,
-                                onChange: (e) => w(e),
-                              }),
-                            ],
-                          }),
-                          (0, o.jsx)("button", {
-                            onClick: E,
-                            children: "Calculate Battery Life",
+                          " /",
+                          " ",
+                          (0, o.jsx)("span", {
+                            className: "text-red-600",
+                            children: "Device Consumption (mA)",
                           }),
                         ],
                       }),
-                      (0, o.jsxs)("div", {
-                        className:
-                          "flex w-full flex-col items-center justify-center gap-4 px-10 sm:w-2/4",
-                        children: [
-                          (0, o.jsxs)("div", {
-                            className:
-                              "rounded-md bg-gray-100 p-2 text-sm font-normal text-gray-700 lg:text-sm",
-                            children: [
-                              "Battery Life =",
-                              " ",
-                              (0, o.jsx)("span", {
-                                className: "text-blue-600",
-                                children: "Battery Capacity (mAh)",
-                              }),
-                              " /",
-                              " ",
-                              (0, o.jsx)("span", {
-                                className: "text-red-600",
-                                children: "Device Consumption (mA)",
-                              }),
-                            ],
-                          }),
-                          (0, o.jsx)(eT, {
-                            batteryLife: l || "",
-                            batterLifePer: u || "",
-                          }),
-                          null !== f &&
-                            (0, o.jsxs)("p", {
-                              className: "text-center text-lg",
-                              children: [
-                                "Estimated Battery Life (Full):",
-                                " ",
-                                (0, o.jsx)("span", {
-                                  className: "break-words text-blue-600",
-                                  children: f,
-                                }),
-                              ],
+                      (0, o.jsx)(e_, {
+                        batteryLife: l || "",
+                        batterLifePer: u || "",
+                      }),
+                      null !== f &&
+                        (0, o.jsxs)("p", {
+                          className: "text-center text-lg",
+                          children: [
+                            "Estimated Battery Life :",
+                            " ",
+                            (0, o.jsx)("span", {
+                              className: "break-words text-blue-600",
+                              children: f,
                             }),
-                        ],
-                      }),
+                          ],
+                        }),
                     ],
                   }),
                 ],
               }),
-            })
-          );
-        };
-      const eT = ({ batteryLife: e, batterLifePer: t }) => {
+            }),
+          })
+        );
+      };
+      const e_ = ({ batteryLife: e, batterLifePer: t }) => {
         let [n, r] = (t && t.match(/\d+/g)?.map(Number)) || [0, 0],
           l = Math.min(((n + r / 60) / 1e4) * 100, 100);
         return (0, o.jsx)("div", {
@@ -15361,7 +15369,7 @@
             "flex items-center justify-center space-x-4 transition-all duration-300 ease-in-out",
           children: (0, o.jsxs)("div", {
             className:
-              "relative flex h-20 w-full min-w-[200px] items-center justify-center rounded-lg border-4 border-gray-700 transition-all duration-300 ease-in-out md:min-w-[300px]",
+              "relative flex h-20 w-full min-w-[220px] items-center justify-center rounded-lg border-4 border-gray-700 transition-all duration-300 ease-in-out sm:min-w-[280px]",
             children: [
               (0, o.jsx)("div", {
                 className:
@@ -15389,7 +15397,7 @@
       (0, u.createRoot)(document.getElementById("root")).render(
         (0, o.jsx)(i.StrictMode, {
           children: (0, o.jsx)(function () {
-            return (0, o.jsx)(o.Fragment, { children: (0, o.jsx)(e_, {}) });
+            return (0, o.jsx)(o.Fragment, { children: (0, o.jsx)(eN, {}) });
           }, {}),
         })
       );
